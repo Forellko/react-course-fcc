@@ -2,7 +2,7 @@ import { useState } from "react"
 
 const Employees = () => {
 
-  const [employees, setEmployees] = useState({
+  const [employees, setEmployees] = useState([{
     id: 1,
     fullName: "Bob Jones",
     designation: "JavaScript Developer",
@@ -85,10 +85,13 @@ const Employees = () => {
     designation: "Graphic Designer",
     gender: "male",
     teamName: "TeamD"
-  })
+  }])
   
   return (
-
+    <div>
+      {employees.map((employee) => (<p>{employee.fullName}</p>)
+      )}
+    </div>
   )
 }
 
